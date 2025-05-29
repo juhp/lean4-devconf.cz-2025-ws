@@ -1,0 +1,6 @@
+name = "devconf-CZ-2025"
+version = "0.1.0"
+defaultTargets = ["DevconfCZ2025"]
+
+[[lean_lib]]
+name = "DevconfCZ2025"
