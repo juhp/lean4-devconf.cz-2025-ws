@@ -1,6 +1,6 @@
 # Workshop at DevConf.CZ 2025, Brno
 
-"Functional Programming in Lean4 with Dependent Types"
+_Functional Programming in Lean4 with Dependent Types_
 
 Intro slides: FIXME
 

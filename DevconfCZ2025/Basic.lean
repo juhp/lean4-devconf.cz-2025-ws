@@ -90,6 +90,7 @@ theorem two_is_two : Eq 2 2 := by rfl  -- proof by a Tactic
 
 example : 2 = 2 := by decide -- another tactic
 
+example : 1 ≠ 2 := by decide
 
 -- Note propositions (including Eq types) cannot be evaluated
 
@@ -105,6 +106,8 @@ def pos : Pos' := ⟨1, by simp⟩
 
 
 -- # MyFin
+
+-- dependent record type
 
 -- index family of (dependent) types
 structure MyFin (n : Nat) where
