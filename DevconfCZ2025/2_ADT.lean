@@ -41,6 +41,7 @@ def person3 : Person where
 
 -- Inductive datatypes
 
+-- lean has Bool
 inductive Boolean where
   | true : Boolean
   | false : Boolean
@@ -94,7 +95,7 @@ example := cons 'a' (cons 'b' nil)  -- ['a','b']
 def numlist : List Nat := [1,2,3,4]
 
 #eval numlist[2]
-#eval numlist[4]?
+#eval numlist[3]?
 
 -- :: is operator of cons
 #eval (0 :: numlist).length

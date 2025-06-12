@@ -14,6 +14,8 @@ example := '和'  -- Unicode character
 
 example : Bool := true || false  -- Boolean
 
+#eval true || false
+
 -- also `Int`, `USize`, `UInt16`, `UInt32`, etc
 
 #check UInt32
@@ -21,7 +23,7 @@ example : Bool := true || false  -- Boolean
 
 -- arbitrary precision integers
 example : Int := 2 ^ 16
-#eval 2 ^ 50
+#eval 2 ^ 75
 
 example : UInt8 := one
 
@@ -43,7 +45,9 @@ example : Unit := ()
 
 #print BEq.beq
 
-#eval if one == 1 then "same" else "diff"
+#eval if one < 2 then "less" else "diff"
+
+#check 1 < 2
 
 #eval (compare 'J' 'P')
 #eval (compare 'J' 'P').isLT
@@ -77,7 +81,11 @@ variable (α β : Type)
 #check Prod α β
 #check α × β
 
+#eval ((1,true) : Nat × Bool)
+
 -- ## Sum types
 
 #check Sum α β
 #check α ⊕ β
+
+#eval (Sum.inl "text" : Sum String Nat)

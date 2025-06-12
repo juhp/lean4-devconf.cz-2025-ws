@@ -19,6 +19,7 @@ open List in
 #eval #[1,2].size
 
 def List.lengthplus1: List α -> Nat :=
+  -- point-free
   Nat.succ ∘ length
 
 def List.lengthplus1' (ℓ: List α): Nat :=

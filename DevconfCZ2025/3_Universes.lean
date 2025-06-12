@@ -8,7 +8,7 @@
 
 #check List
 
-example: Type := Nat
+example: Type 0 := Nat
 
 -- There is a hierarchy of Type Universes
 -- (to avoid Russell's paradox)
