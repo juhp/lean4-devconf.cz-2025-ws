@@ -6,11 +6,15 @@
 
 #check List.length
 
--- open namespace
+-- open a namespace
 open List in
 #check length
 
 #check Option.some
+
+#eval (some 'a').isNone
+
+#eval Nat.zero.add 1
 
 #eval #[1,2].size
 

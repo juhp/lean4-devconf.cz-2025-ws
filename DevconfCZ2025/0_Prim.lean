@@ -6,7 +6,7 @@ def one : Nat := 1  -- Natural number (>= 0)
 
 example : Nat := 0
 example := 1
-example := (2: Nat)
+example := (2 : Nat)
 
 example : Char := 'a'
 
@@ -14,9 +14,18 @@ example := '和'  -- Unicode character
 
 example : Bool := true || false  -- Boolean
 
--- also `Int`, `UInt`, `USize`, `UInt16`, etc
+-- also `Int`, `USize`, `UInt16`, `UInt32`, etc
+
+#check UInt32
+#check Int64
+
+-- arbitrary precision integers
+example : Int := 2 ^ 16
+#eval 2 ^ 50
 
 example : UInt8 := one
+
+#check (one : UInt8)
 
 example : Float := 1.0
 

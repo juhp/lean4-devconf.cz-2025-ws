@@ -2,13 +2,18 @@
 
 -- note the parens are only needed for type annotations
 
+-- `example [: type] := value`
+
 example := fun x => x + 1
+
+example (n : Nat) : Nat :=
+  n + 1
 
 example := (· + 1)
 
 #eval (fun x => x + 1) 2
 
-def incr (n: Nat) := n + 1
+def incr (n : Nat) := n + 1
 
 #eval incr 5
 
@@ -20,9 +25,12 @@ example : α -> α := id
 
 def id' : α -> α := fun x => x
 
+#eval id' (1,"hi")
+
+
 -- # Termination
 
--- functions in Lean are Total: ie they must terminate
+-- functions in Lean are total: ie they must terminate
 -- (unless that are prefixed partial).
 
 -- Ackermann function

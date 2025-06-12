@@ -1,0 +1,7 @@
+name = "git-status"
+version = "0.1.0"
+defaultTargets = ["git-status"]
+
+[[lean_exe]]
+name = "git-status"
+root = "Main"

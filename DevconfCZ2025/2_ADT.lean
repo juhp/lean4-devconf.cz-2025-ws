@@ -25,19 +25,28 @@ def person2 : Person := ⟨"John",false⟩
 
 def same : Person.mk "Bob" true = ⟨"Bob", true⟩ := by rfl
 
+#check Person.mk "Bob" true = ⟨"Bob", true⟩
+
 def same' : Person.mk "Sara" true = ⟨ "Sara", true ⟩ := Eq.refl person1
 
+-- other equivalent record syntax for structures:
+
+example : Person := {name := "Jane", tall := false}
+
+def person3 : Person where
+  name := "Jan"
+  tall := true
 
 -- ## Sum types
 
--- Inductive
+-- Inductive datatypes
 
 inductive Boolean where
   | true : Boolean
   | false : Boolean
 
--- option type (a la Haskell)
-inductive Maybe (α: Type) where
+-- option type (à la Haskell)
+inductive Maybe (α : Type) where
   | nothing : Maybe α
   | just : α -> Maybe α
 
@@ -45,9 +54,9 @@ inductive Maybe (α: Type) where
 inductive Void where
 
 -- Lean has Option
-inductive Optional (α: Type) where
-  | some: α -> Optional α
-  | none: Optional α
+inductive Optional (α : Type) where
+  | some : α -> Optional α
+  | none : Optional α
 
 #eval Optional.some 'a'
 #eval some 'b'
@@ -65,7 +74,7 @@ example := succ (succ zero)  -- 2
 -- really only an ADT:
 inductive MyNat : Type where
   | zero : MyNat
-  | succ (n: MyNat) : MyNat
+  | succ (n : MyNat) : MyNat
 
 example : MyNat := MyNat.zero.succ.succ
 example : MyNat := .succ MyNat.zero.succ.succ
@@ -73,7 +82,7 @@ example : MyNat := .succ MyNat.zero.succ.succ
 -- ## Lists
 
 -- Lean has List α
-inductive List' (α: Type) where
+inductive List' (α : Type) where
   | nil : List' α
   | cons : α -> List' α -> List' α
 
@@ -107,4 +116,4 @@ def arr := #[true,false]
 #eval arr[2]?
 -- #eval arr[2]! -- Error: index out of bounds
 
--- also Bitvect n
+-- also Bitvectors (Bitvect n): not covered today

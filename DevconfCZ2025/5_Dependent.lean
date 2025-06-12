@@ -25,6 +25,9 @@ def Vect.zip : Vect α n -> Vect β n -> Vect (α × β) n
 
 #eval Vect.zip v3 v3
 
+--#eval Vect.zip v2 v3  -- application type mismatch
+
+
 -- # Fin
 
 -- dependent record type

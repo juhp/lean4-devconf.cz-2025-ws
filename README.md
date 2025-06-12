@@ -15,10 +15,10 @@ See: https://lean-lang.org/documentation/setup/
 Check your installation:
 
 ```shellsession
-$ lake new test123
-$ cd test123
+$ lake new hello
+$ cd hello
 $ lake build
-$ lake exe test123
+$ lake exe hello
 ```
 
 It should output: "Hello, world!"
